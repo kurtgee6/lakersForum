@@ -36,7 +36,8 @@ app.listen(PORT, function(err) {
         console.log("")
         console.log("------------------ CONNECTION -------------------")
         console.log("Listening on port: " + PORT);
-        console.log("")
+        console.log("-------------------------------------------------")
+        console.log("")        
         
     }
     else console.log(err)
