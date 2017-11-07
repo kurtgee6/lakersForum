@@ -15,11 +15,20 @@ app.use(bodyParser.json());
 // Serve up static assets
 app.use(express.static("client/build"));
 
-app.get('/', function(req, res) {
+//Require our DB Models users
+// const models = require("./models");
+
+// //Sync Database
+// models.sequelize.sync().then(function() {
     
-        res.send('Welcome to Lakers Forum!');
+//         console.log('Nice! Database looks fine')
     
-    });
+//     }).catch(function(err) {
+    
+//         console.log(err, "Something went wrong with the Database Update!")
+    
+// });
+
 
 app.listen(PORT, function(err) {
 
