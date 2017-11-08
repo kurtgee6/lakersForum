@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import {Navbar, NavItem, Icon} from 'react-materialize'
-import { Link } from "react-router-dom";
+import {Navbar} from 'react-materialize'
+import { NavLink } from "react-router-dom";
 import './Nav.css';
 
 class Nav extends Component {
@@ -9,31 +9,19 @@ class Nav extends Component {
         return (
             <div>
                 <Navbar brand='Los Angeles Lakers' right>
-                    
-                    <NavItem>
-                        <Link to='/article'>
-                            <Icon>search</Icon>
-                        </Link>
-                    </NavItem>
 
-                    <NavItem>
-                        <Link to=''>
-                            <Icon>view_module</Icon>
-                        </Link>
-                    </NavItem>
+                <li>
+                    <NavLink to="/article">
+                        Article
+                    </NavLink>
+                </li>
 
-                    <NavItem>
-                        <Link to=''>
-                            <Icon>refresh</Icon>
-                        </Link>
-                    </NavItem>
-
-                    <NavItem>
-                        <Link to=''>
-                            <Icon>more_vert</Icon>
-                        </Link>
-                    </NavItem>
-
+                <li>
+                    <NavLink to="/myRumors">
+                        My Rumors
+                    </NavLink>
+                </li>
+            
                 </Navbar>
             </div>
         );
