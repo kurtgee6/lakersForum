@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/kurtgee6/lakersForum#readme",
   "dependencies": {
+    "axios": "^0.17.0",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
