@@ -6,6 +6,7 @@ const app = express();
 const session = require('express-session');
 const bodyParser = require('body-parser');
 const env = require('dotenv').load();
+const routes = require('./routes');
 const PORT = process.env.PORT || 3005;
 
 //The code below allows our app to the body parser
@@ -17,6 +18,8 @@ app.use(express.static("client/build"));
 
 // Require our DB Models users
 const models = require("./models");
+
+app.use(routes);
 
 //Sync Database
 models.sequelize.sync().then(function() {
