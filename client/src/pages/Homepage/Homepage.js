@@ -9,7 +9,7 @@ class Homepage extends Component {
                 <Parallax imageSrc="https://s-media-cache-ak0.pinimg.com/originals/74/27/66/742766ac49506c900b614bfddba1b08c.jpg"/>
                 <div id='sumContainer'>
                     <div className="row container">
-                        <h3 className="header ">JOIN THE PURPLE AND GOLD</h3>
+                        <h3 className="header ">Join The Purple and Gold</h3>
                         <p className="text-darken-3 lighten-3">
                             Connect with the Los Angeles Lakers Community to talk about trades, rumors, players, records and more!
                         </p>
