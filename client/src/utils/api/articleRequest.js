@@ -1,11 +1,12 @@
 import axios from "axios";
 
-export default {
+const articleRequest = {
 
   //This function returns all the article 
-  getArticle: function() {
-    return axios.get("/api/article");
+  getArticle(data) {
+    return axios.post('/loadArticle', data)
   }
 
-  
-};
+}
+
+export default articleRequest;
