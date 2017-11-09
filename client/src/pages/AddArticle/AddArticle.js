@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {Row, Col, Input} from 'react-materialize';
 import './AddArticle.css'
 
-class Userpage extends Component {
+class AddArticle extends Component {
     render() {
         return(
             <div>
@@ -22,4 +22,4 @@ class Userpage extends Component {
     }
 }
 
-export default Userpage;
+export default AddArticle;
