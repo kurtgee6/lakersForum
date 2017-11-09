@@ -12,13 +12,13 @@ class Nav extends Component {
 
                 <li>
                     <NavLink to="/article">
-                        Article
+                        Articles
                     </NavLink>
                 </li>
 
                 <li>
-                    <NavLink to="/myRumors">
-                        My Rumors
+                    <NavLink to="/addArticle">
+                        Add Rumors
                     </NavLink>
                 </li>
             

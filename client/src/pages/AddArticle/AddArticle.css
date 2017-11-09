@@ -1,0 +1,39 @@
+.input-field input[type=text]:focus + label {
+    color: #330f53;
+}
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #330f53;
+    box-shadow: 0 1px 0 0 #330f53;
+  }
+
+  .form-grid {
+      padding: 10px;
+      border: 1px solid #330f53;
+      height: 500px;
+  }
+
+  textarea {
+      height: 300px;
+  }
+
+#userName {
+    margin-left: 100%;
+}
+
+#addArticle {
+    outline: none;
+    margin-top: 2%; 
+    margin-left: 75%;
+    font-size: 10px;
+    width: 20%; 
+    padding: 5px;
+    font-family: 'Raleway', sans-serif;    
+    background-color: #330f53;
+    border: 1px solid #ccbadc;
+    color: #ccbadc;
+}
+
+#addArticle:hover {   
+    background-color: white;
+}

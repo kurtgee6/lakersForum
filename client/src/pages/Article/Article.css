@@ -3,3 +3,13 @@
     background-color: black;
     padding: 20px;
 }
+
+thead {
+ color: #ccbadc;
+ font-family: 'Raleway', sans-serif;     
+}
+
+td {
+    font-family: 'Raleway', sans-serif;   
+    color: #330f53;    
+}

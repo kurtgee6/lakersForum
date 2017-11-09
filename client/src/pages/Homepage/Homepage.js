@@ -15,7 +15,7 @@ class Homepage extends Component {
                         </p>
                     </div>
                 </div>
-                <Parallax imageSrc="https://images3.alphacoders.com/200/200319.jpg"/>
+                <Parallax imageSrc="https://img00.deviantart.net/eec9/i/2011/041/0/1/kobe_la_lakers_wallpaper_by_hfs991hfs-d397jxb.png"/>
             </div>
         )
     }
