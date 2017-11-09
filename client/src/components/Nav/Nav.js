@@ -18,7 +18,7 @@ class Nav extends Component {
 
                 <li>
                     <NavLink to="/addArticle">
-                        Add Rumors
+                        Add Article
                     </NavLink>
                 </li>
             

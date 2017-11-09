@@ -13,7 +13,7 @@ class Userpage extends Component {
                             <Input defaultValue='Topic'/>
                             <Input id="userName" defaultValue='Username' />                       
                             <textarea defaultValue='Summary'/>
-                            <button id="addArticle">Add My Rumor</button>
+                            <button id="addArticle">Add My Article</button>
                     </Col>
                     <Col s={3} className='grid-example'></Col>
                 </Row>
