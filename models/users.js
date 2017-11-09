@@ -1,7 +1,7 @@
 
 module.exports = function(sequelize, Sequelize) {
     
-    var Users = sequelize.define('users', {
+    var Article = sequelize.define('article', {
     
         id: {
             autoIncrement: true,
@@ -11,7 +11,7 @@ module.exports = function(sequelize, Sequelize) {
         name: {
             type: Sequelize.STRING
         },
-        position: {
+        topic: {
             type: Sequelize.STRING
         },
         location: {
@@ -22,5 +22,5 @@ module.exports = function(sequelize, Sequelize) {
         }
     });
     
-    return Users;
+    return Article;
  }
