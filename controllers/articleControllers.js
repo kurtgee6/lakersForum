@@ -1,6 +1,6 @@
 const db = require("../models");
 
-// Defining methods for the faqController
+// Defining methods for the article controller
 module.exports = {
   findAll: function(req, res) {
     db.article
