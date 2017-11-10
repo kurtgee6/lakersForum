@@ -4,7 +4,7 @@ const articleRequest = {
 
   //This function returns all the article 
   getArticle(data) {
-    return axios.post('/loadArticle', data)
+    return axios.post('/', data)
   }
 
 }

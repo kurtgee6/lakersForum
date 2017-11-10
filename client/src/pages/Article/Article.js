@@ -36,7 +36,7 @@ class Homepage extends Component {
             } else {
                 console.log('no data');
             }
-        
+
         }
     
     render() {
@@ -50,6 +50,7 @@ class Homepage extends Component {
                     {(this.state && this.state.article && this.state.article.length) ? (
                         <div>
                         {this.state.article.map(items => (
+
                             <Table>
                                 <thead>
                                     <tr>
@@ -70,7 +71,7 @@ class Homepage extends Component {
                         ))}
                     </div>
                     ) : (
-                    <h3>No Results to Display</h3>
+                    <h3>No Results to display, please try again later.</h3>
                     )}
                    
                     </Col>
