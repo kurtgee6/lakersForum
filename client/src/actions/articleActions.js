@@ -8,7 +8,7 @@ function loadArticle(data) {
 	}
 }
 
-export const registerUser = (articleData) => {
+export const grabArticle = (articleData) => {
     return dispatch => {
       articleRequest.getArticle(articleData)
       .then(res => {
