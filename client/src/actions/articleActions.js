@@ -1,5 +1,4 @@
-import articleRequest from '../utils/api/articleRequest.js';
-
+import api from '../utils/api/articleRequest';
 
 function loadArticle(data) {
 	return {
@@ -8,13 +7,12 @@ function loadArticle(data) {
 	}
 }
 
-export const grabArticle = (articleData) => {
+export const getAllArticle = () => {
     return dispatch => {
-      articleRequest.getArticle(articleData)
-      .then(res => {
-            if (res.data) {
-                dispatch(loadArticle(res.data))  
-            }
+      api.getAllArticle()
+        .then(res => {
+          dispatch(loadArticle(res.data));
         })
     }
-}
+  }
+

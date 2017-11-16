@@ -1,10 +1,16 @@
-function getArticle(state = {}, action) {
+
+  export function allArticle(state = {article: []} , action) {
+    
+
     switch(action.type) {
+  
       case "LOAD_ARTICLE":
         return { ...state, article: action.payload }
-      default:
+  
+        default:
         return state
+  
+      }
+  
     }
-  }
 
-  export default getArticle;

@@ -3,12 +3,14 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import {Table, thead, tbody, Row, Col} from 'react-materialize';
 import './Article.css';
-import { grabArticle } from '../../actions/articleActions'
+import * as getAllArticle  from '../../actions/articleActions';
+
+console.log(getAllArticle)
 
 class Homepage extends Component {
-    
+
     constructor(props) {
-        
+
         super(props)
     
         this.state = {
@@ -21,23 +23,27 @@ class Homepage extends Component {
         }
 
     }
+
+        componentDidMount() {
+            this.props.getAllArticle();
+        }
+    
         grabbingData = (values) => {    
         
-        this.setState({values});
+        this.setState({
 
-        if (true) {
-            this.props.grabArticle({
-                name: this.state.values.name,
-                topic: this.state.values.topic,
-                location: this.state.values.location,
-                image: this.state.values.image,
-                createdAt: this.state.values.createdAt
-              })
-            } else {
-                console.log('no data');
-            }
-
+                article: values,
+                name: "",
+                topic: "",
+                location: "",
+                image: "",
+                createdAt: ""
+            
+            })
+            this.props.loadArticle
         }
+
+        
     
     render() {
         return(
@@ -84,12 +90,8 @@ class Homepage extends Component {
 
 function mapStateToProps(state) {
     return {
-        name: state.name,
-        topic: state.topic,
-        location: state.location,
-        image: state.image,
-        createdAt: state.createdAt
+        data: state.data
     };
 }
 
-export default withRouter(connect(mapStateToProps, { grabArticle })(Homepage));
+export default withRouter(connect(mapStateToProps, getAllArticle )(Homepage));

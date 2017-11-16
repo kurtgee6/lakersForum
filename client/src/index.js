@@ -5,13 +5,13 @@ import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import promise from 'redux-promise';
-import articleReducer from './reducers/articleReducer';
+import allReducers from './reducers';
 import App from './App';
 import './index.css';
 
 
 const store = createStore(
-    articleReducer,
+    allReducers,
     applyMiddleware(thunk, promise)
 );
 
