@@ -7,25 +7,18 @@ import * as getAllArticle  from '../../actions/articleActions';
 
 class Homepage extends Component {
 
-    constructor(props) {
-
-        super(props)
-
-    }
-
         componentDidMount() {
             this.props.getAllArticle();
         }
 
     render() {
-        console.log(this.props.state);
         return(
             <div>
                 <br />
                 <Row>
                     <Col s={2} className='grid-example'></Col>
                     <Col s={8} className='grid-example'>
-                
+            
                     {(this.props && this.props.article && this.props.article.length) ? (
                         <div>
 
@@ -41,7 +34,7 @@ class Homepage extends Component {
 
                         {this.props.article.map(items => (
 
-                            <Table>
+                            <Table key={items.id}>
                                 <tbody>
                                     <tr>
                                         <td>{items.name}</td>
