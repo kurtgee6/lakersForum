@@ -1,7 +1,6 @@
 
   export function allArticle(state = {article: []} , action) {
     
-
     switch(action.type) {
   
       case "LOAD_ARTICLE":

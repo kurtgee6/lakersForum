@@ -5,47 +5,20 @@ import {Table, thead, tbody, Row, Col} from 'react-materialize';
 import './Article.css';
 import * as getAllArticle  from '../../actions/articleActions';
 
-console.log(getAllArticle)
-
 class Homepage extends Component {
 
     constructor(props) {
 
         super(props)
-    
-        this.state = {
-            article: [],
-            name: '',
-            topic: '',
-            location: '',
-            image: '',
-            createdAt: ''
-        }
 
     }
 
         componentDidMount() {
             this.props.getAllArticle();
         }
-    
-        grabbingData = (values) => {    
-        
-        this.setState({
 
-                article: values,
-                name: "",
-                topic: "",
-                location: "",
-                image: "",
-                createdAt: ""
-            
-            })
-            this.props.loadArticle
-        }
-
-        
-    
     render() {
+        console.log(this.props.state);
         return(
             <div>
                 <br />
@@ -53,19 +26,22 @@ class Homepage extends Component {
                     <Col s={2} className='grid-example'></Col>
                     <Col s={8} className='grid-example'>
                 
-                    {(this.state && this.state.article && this.state.article.length) ? (
+                    {(this.props && this.props.article && this.props.article.length) ? (
                         <div>
-                        {this.state.article.map(items => (
+
+                        <Table>
+                            <thead>
+                                <tr>
+                                    <th data-field="id">username</th>
+                                    <th data-field="name">topic</th>
+                                    <th data-field="date">created at</th>
+                                </tr>
+                            </thead>
+                        </Table>
+
+                        {this.props.article.map(items => (
 
                             <Table>
-                                <thead>
-                                    <tr>
-                                        <th data-field="id">username</th>
-                                        <th data-field="name">topic</th>
-                                        <th data-field="date">created at</th>
-                                    </tr>
-                                </thead>
-
                                 <tbody>
                                     <tr>
                                         <td>{items.name}</td>
@@ -88,9 +64,9 @@ class Homepage extends Component {
     }
 }
 
-function mapStateToProps(state) {
+const mapStateToProps = (state) => {
     return {
-        data: state.data
+        article: state.allArticle.article,
     };
 }
 
